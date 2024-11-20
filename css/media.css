@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/* 스마트폰*/
+@media screen and (max-width: 480px) {
+  header .subNav .inner {
+    width: 100% !important;
+  }
+}
+/* 작은태블릿 */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  header .subNav .inner {
+    width: 70% !important;
+  }
+}
+/* 큰태블릿 */
+/* 큰타블릿까지 가져야할 공통사항 */
+@media screen and (max-width: 990px) {
+  div.top, div.bottom {
+    padding: 0 2em;
+  }
+}
+/* 작은모니터까지 가져야할 공통사항*/
+@media screen and (max-width: 1200px) {
+  header, #layout {
+    font-size: 17rem;
+  }
+  header div.right, header div.left, header div.bottom, #layout div.right, #layout div.left, #layout div.bottom {
+    display: none;
+  }
+  header div.top ul.pc-menu, #layout div.top ul.pc-menu {
+    display: none;
+  }
+  header div.top .hamberger-menu, #layout div.top .hamberger-menu {
+    display: block;
+  }
+  section .rel {
+    width: 90%;
+    height: auto;
+  }
+  #section2 .publishing-con.mob-only ul {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 4em;
+  }
+  #section2 .publishing-con.mob-only ul li {
+    overflow: hidden;
+    translate: 0% !important;
+    padding: 10rem;
+    background-color: #fff;
+    border-radius: 0.2em;
+    width: inherit;
+    height: inherit;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.23);
+  }
+  #section2 .publishing-con.mob-only ul li a {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+  #section2 .publishing-con.mob-only ul li a .thumbnail {
+    flex: 7;
+    display: inline;
+    overflow: hidden;
+  }
+  #section2 .publishing-con.mob-only ul li a .thumbnail img {
+    display: inline-block;
+  }
+  #section2 .publishing-con.mob-only ul li a p {
+    flex: 5;
+    display: block;
+    border: none;
+    font-size: 3em;
+  }
+}

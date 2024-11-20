@@ -1,0 +1,102 @@
+// responsive setting
+// 0px ~ 360px (작은 스마트폰)
+// 360px ~ 480px (큰 스마트폰)
+// 480px ~ 768px (작은 태블릿)
+// 768px ~ 990px (큰 태블릿)
+// 990px ~ 1200px (작은 데스크탑)
+// 1200px ~ (큰 데스크탑)
+
+//이항목은 두개로 분류되어 있음
+//1.공통으로 적용될 것 max로만 표시된 항목
+//2.그 색션에서만 적용이 될 것 min-max로 표시되어 있음
+
+/* 스마트폰*/
+@media screen and (max-width:480px){
+  header .subNav .inner{
+    width:100% !important;
+  }
+  
+}
+/* 작은태블릿 */
+@media screen and (min-width:481px) and (max-width:768px){
+  header .subNav .inner{
+    width:70% !important;
+  }
+}
+/* 큰태블릿 */
+@media screen and (min-width:769px) and (max-width:990px){ 
+}
+
+/* 큰타블릿까지 가져야할 공통사항 */
+@media screen and (max-width:990px){
+  div.top, div.bottom{
+    padding:0 2em;
+  }
+  
+}
+/* 작은모니터까지 가져야할 공통사항*/
+@media screen and (max-width:1200px){
+  header, #layout{
+    font-size: 17rem;
+    div{
+      &.right,
+      &.left,
+      &.bottom{
+        display: none;
+      }
+      &.top{
+        ul.pc-menu{display: none;}
+        .hamberger-menu{
+          display: block;
+        }
+      }
+    }
+  }
+  section .rel{
+    width:90%;
+    height: auto;
+  }
+  #section2 {
+    .publishing-con.mob-only{
+      ul{
+        // background-color: red;
+        display: grid;
+        grid-template-rows:1fr 1fr;
+        grid-template-columns:1fr 1fr;
+        gap:4em;
+        li{
+          overflow: hidden;
+          translate:0% !important;
+          padding:10rem;
+          background-color: #fff;
+          border-radius: 0.2em;
+          width: inherit;
+          height: inherit;
+          box-shadow: 0 3px 20px rgb(0 0 0 /.23);
+          a{
+            width: inherit;
+            height: inherit;
+            display: flex;
+            flex-direction: column;
+            .thumbnail{
+              flex:7;
+              display: inline;
+              overflow: hidden;
+              img{
+                display: inline-block;
+                }
+            }
+            p{flex:5;
+              display:block;
+              border: none;
+              font-size: min(3em);
+            }
+          }
+          
+        }
+      }
+    }
+  }
+  
+  
+}
